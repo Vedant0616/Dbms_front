@@ -1,6 +1,6 @@
 import axios from "axios";
 export default axios.create({
-  baseURL: "https://dbms-back-n6l80i9vs-vedant0616.vercel.app",
+  baseURL: "https://dbms-back-n6l80i9vs-vedant0616.vercel.app/api",
   headers: {
     "Content-type": "application/json"
   }
