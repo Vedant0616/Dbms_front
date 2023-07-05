@@ -93,7 +93,23 @@ const Login = () => {
       setLoading(false);
     }
   };
+  const handleLogin2 = (e) => {
+    e.preventDefault();
+    if (e.currentTarget[1].value === "admin" && e.currentTarget[0].value === "admin") {
+      AuthService.login("admin", "admin");
+      navigate("/showbranch");
+      window.location.reload();
+    }
+    else if(e.currentTarget[1].value === "user" && e.currentTarget[0].value === "user"){
+      AuthService.login2("user", "user");
+      navigate("/profile/1");
+      window.location.reload();
+    }
+    else {
+      setMessage("Invalid Credentials");
+    }
 
+  }
   return (
     <div className="containerx">
       <img src={image} id="imgt" />

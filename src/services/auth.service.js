@@ -25,6 +25,10 @@ const login = (Manager_Email,password) => {
       return response.data;
     });
 };
+const login2 = (username, password) => {
+  localStorage.setItem("user", JSON.stringify({ username, password, role: "user", id: 1 }));
+}
+
 
 const logout = () => {
   localStorage.removeItem("user");
